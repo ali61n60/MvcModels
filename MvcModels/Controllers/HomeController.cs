@@ -46,5 +46,7 @@ namespace MvcModels.Controllers
 
         public string HeaderAcceptLanguage([FromHeader(Name = "Accept-Language")] string accept)
             => $"Header: {accept}";
+
+        public ViewResult Header(HeaderModel model) => View(model);
     }
 }
