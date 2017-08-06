@@ -48,5 +48,9 @@ namespace MvcModels.Controllers
             => $"Header: {accept}";
 
         public ViewResult Header(HeaderModel model) => View(model);
+
+        public ViewResult Body() => View();
+        [HttpPost]
+        public Person Body([FromBody]Person model) => model;
     }
 }
