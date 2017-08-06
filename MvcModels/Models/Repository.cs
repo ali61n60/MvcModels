@@ -47,14 +47,8 @@ namespace MvcModels.Models
         public IEnumerable<Person> People => people.Values;
         public Person this[int id]
         {
-            get
-            {
-                return people.ContainsKey(id) ? people[id] : null;
-            }
-            set
-            {
-                people[id] = value;
-            }
+            get => people.ContainsKey(id) ? people[id] : null;
+            set => people[id] = value;
         }
     }
 }
