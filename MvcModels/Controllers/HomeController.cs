@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using MvcModels.Models;
 
@@ -35,6 +37,6 @@ namespace MvcModels.Controllers
             return View(summary);
         }
 
-        public ViewResult Names(string[] names) => View(names ?? new string[0]);
+        public ViewResult Names(IList<string> names) => View(names ?? new List<string>());
     }
 }
